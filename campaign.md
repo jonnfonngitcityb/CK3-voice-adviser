@@ -1,19 +1,7 @@
 # Current save
 
-One campaign. Voice updates this when you state a fact. "New campaign" clears these fields after you confirm.
-
-- Ruler: unknown
-- Primary title: unknown
-- Liege: unknown
-- Year: unknown
-- Government: unknown
-- Succession law: unknown
-- Crown authority: unknown
-- Faith: unknown
-- Culture: unknown
-- Current war, raid, or faction: none stated
-- Last decision: none
+The watcher has not read an autosave. Facts from the game go in `state/realm.md`. What you say goes in `state/spoken.md`. This file stays the stub.
 
 # Cleared save
 
-Set every field above back to unknown. Do not delete this file.
+"New campaign" clears `state/realm.md` and `state/spoken.md` after you confirm. Do not delete this file.

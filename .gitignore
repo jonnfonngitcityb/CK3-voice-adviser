@@ -1,0 +1,7 @@
+state/*.md
+state/*.json
+state/*.log
+state/*.txt
+state/*.ck3
+state/watcher.pid
+watcher/extract/target/

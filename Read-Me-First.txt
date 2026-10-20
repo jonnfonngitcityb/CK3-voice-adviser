@@ -1,0 +1,175 @@
+Read me first
+
+This folder is for your Crusader Kings game.
+You talk to Grok. Grok answers.
+A helper called the watcher reads your newest autosave, so Grok knows your realm.
+
+Do the steps in order. Double-click each file once.
+
+
+Once: install Rust
+
+The watcher needs Rust. You install it one time.
+
+1. Open your web browser.
+2. Click the address bar at the top.
+3. Type rustup.rs and press Enter.
+4. Click rustup-init.exe to download it.
+   If you see a line that starts with the word curl, that is the wrong one.
+   Look for the words Windows 64-bit, then click rustup-init.exe under those words.
+5. Open the downloaded file.
+6. If Windows asks "Do you want to allow this app to make changes", click Yes.
+7. A black window opens. Press Enter.
+8. Wait. When it says to press Enter to close, press Enter.
+
+
+Once: let the watcher learn the game's words
+
+Do this one time. Start a brand new game for these steps, then quit that game.
+Your real campaign stays as it is.
+
+1. Open Steam.
+2. Right-click Crusader Kings III.
+3. Click Properties.
+4. Find the box named Launch Options.
+5. Click in that box and type this, with the minus sign:
+
+-debug_mode
+
+6. Close the Properties window.
+7. Press Play.
+8. Start a brand new game. Any ruler is fine.
+9. Press the key under Escape. It has a ~ on it.
+10. A typing line appears. Click that line.
+11. Type this and press Enter:
+
+oos_dump
+
+12. Quit Crusader Kings all the way to the desktop.
+13. Open Steam again. Right-click Crusader Kings III. Click Properties.
+14. Delete -debug_mode so the Launch Options box is empty.
+15. Close Properties.
+
+
+Every time you play
+
+1. Open this folder.
+2. Double-click the file named Start CK3 Guide.
+3. The first time, wait. The window builds the watcher. That can take a few minutes.
+   Leave the window open until Grok appears.
+4. If a window asks you to trust this folder, click Trust.
+5. When Grok is open, hold Ctrl and press Space. You can talk.
+6. Play your game the way you already do.
+   When the game autosaves, the watcher updates on its own.
+7. Pause the game before you ask Grok something.
+   Grok knows the last autosave.
+   If you did something after that save, say what you did.
+
+
+How to see that it worked
+
+Ask Grok: who am I playing?
+
+Grok should say your ruler.
+If Grok says the watcher has not read an autosave, do the word steps again.
+Then double-click Start CK3 Guide again.
+
+You can also open the state folder and open the file realm.md.
+Your ruler's name is near the top.
+
+
+How to change what the watcher reads
+
+Open the file watcher-settings.txt. It opens in Notepad.
+Change only the words after an = sign.
+Then click File, and click Save.
+
+Save the file while the game is open. The watcher picks up the new line on its own.
+If the watcher is off, it picks up the new line the next time you double-click Start CK3 Guide.
+
+There are two lines you can change.
+
+save folder
+
+Leave this line blank:
+
+save folder =
+
+Blank means: read the newest autosave from every Crusader Kings save folder.
+
+Use this line when Grok is talking about the wrong campaign.
+Paste the folder for the campaign you are playing.
+
+1. Open File Explorer. The icon is a yellow folder on the task bar.
+2. Click Documents.
+3. Open Paradox Interactive.
+4. Open Crusader Kings III.
+5. Open save games.
+6. Open the folder for your campaign.
+   You should see a file named autosave.ck3.
+7. If Paradox Interactive is not in Documents, open OneDrive, then Documents, and follow the same names.
+8. Click the long box at the top of the window. The whole line turns blue.
+9. Hold Ctrl and press C.
+10. Open watcher-settings.txt.
+11. Click right after save folder =
+12. Hold Ctrl and press V.
+13. Click File, then Save.
+
+The path is a folder. If the pasted line ends in .ck3, that is ok. The watcher uses the folder around that file.
+
+To go back to the newest autosave of any campaign, delete the path so the line is blank again:
+
+save folder =
+
+Then save the file.
+
+save name
+
+Leave this line as it is:
+
+save name = autosave.ck3
+
+Change the name only when your save file has another name.
+Keep the .ck3 on the end. Then save the file.
+
+A file you saved by hand still wins when it is newer than that autosave.
+The save folder line is how you stick to one campaign.
+
+
+How to correct one fact
+
+Say the fact to Grok. Example: my gold is 200.
+If the save says something else, Grok asks which one is true.
+Say the one on the screen.
+
+
+How to start a different campaign
+
+Say: new campaign
+Grok asks you to confirm. Say yes.
+The next autosave fills the realm in again.
+
+Leave every other file in this folder as it is.
+
+
+When you are done playing
+
+Close Grok when you want. The watcher keeps running. That is fine.
+To turn the watcher off, double-click the file named Stop the watcher.
+
+
+When there is a new copy of this folder
+
+1. Close Grok.
+2. Double-click Stop the watcher.
+3. Update the folder the same way you got it.
+   If a message says watcher-settings.txt was changed by both people, keep your copy.
+4. Double-click Start CK3 Guide again.
+
+
+If you need help
+
+Open the state folder.
+Open the file watch.log in Notepad.
+Send that file to the person who gave you this folder.
+If a window says the watcher did not start, send a picture of that window too.

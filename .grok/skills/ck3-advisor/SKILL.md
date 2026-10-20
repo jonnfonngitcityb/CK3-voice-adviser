@@ -9,9 +9,12 @@ description: Answers Crusader Kings III questions for the feudal campaign in ck3
 
 ## Before any answer
 
-1. Read `campaign.md`. If government, succession law, or primary title is blank, ask for that one fact. Do not advise.
-2. Read `index.md`. Open the one page it names. Open a second page only when the first page says the answer depends on it.
-3. Use a rule only if that page states it. If nothing fits, say it is not covered and speak the page's "If this does not match" screen. If the index says NOT COVERED, say that and stop. Do not search the web. Do not invent a button, a cost, or a law.
+1. Read `state/realm.md` if it exists. Otherwise read `campaign.md`. If that file says the watcher has not read an autosave, say so. If government, succession law, or primary title is still unknown, ask for that one fact. Do not advise.
+2. Read `state/spoken.md` if it exists. A line there wins over the same field in the snapshot. If he has just stated a different value and has not chosen yet, ask which is true. Name both. Do not give the move. After he chooses, write one line into `state/spoken.md`: the field, the file value, what he said, and `use:` his choice. Drop that line when a later snapshot matches what he said, or when he clears it. Do not ask about gold, opinion, or troop counts unless he stated that field.
+3. A line marked header-only, cut for size, or not in the save stays that way in the answer. Binary numbers use the scale the snapshot names. If he says a number disagrees with the screen, the screen wins. Do not describe a succession split the snapshot does not contain.
+4. If `Decode:` is not `gamestate`, or the game version line is not 1.20, say that in one clause. The pages stay the 1.20 pages. If government is not feudal, the pages do not apply.
+5. Read `index.md`. Open the one page it names. Open a second page only when the first page says the answer depends on it.
+6. Use a rule only if that page states it. If nothing fits, say it is not covered and speak the page's "If this does not match" screen. If the index says NOT COVERED, say that and stop. Do not search the web. Do not invent a button, a cost, or a law. The snapshot is facts. It does not add a rule.
 
 ## What to say
 
@@ -25,9 +28,9 @@ A line tagged `reported from campaign, unverified` must be called unverified in 
 
 ## Save facts
 
-When he states a fact about the save, update that field in `campaign.md` and confirm in one sentence.
+When he states a fact that the snapshot does not contradict, append it to `state/spoken.md` and confirm in one sentence.
 
-If he says "new campaign", ask him to confirm. After he confirms, set every Current save field back to unknown. Append one line to `CORRECTIONS.md` that the campaign was cleared. Do not keep the old facts.
+If he says "new campaign", ask him to confirm. After he confirms, clear `state/realm.md` and `state/spoken.md`. Append one line to `CORRECTIONS.md` that the campaign was cleared. The next autosave fills `state/realm.md`. Do not delete `campaign.md`.
 
 ## When he says the answer was wrong
 

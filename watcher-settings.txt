@@ -1,0 +1,15 @@
+# Watcher settings
+# Open this file in Notepad.
+# Change only the words after the = sign.
+# Click File, then Save.
+# Lines that start with # are notes. Leave them as they are.
+#
+# save folder
+# Leave this blank to read the newest autosave from every CK3 save folder.
+# To stick to one campaign, paste that campaign's folder here.
+# Steps are in Read-Me-First.txt.
+save folder =
+
+# save name
+# Leave this as autosave.ck3 unless your save file has a different name.
+save name = autosave.ck3
